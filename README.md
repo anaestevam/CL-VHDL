@@ -1,1 +1,3 @@
-# CL-VHDL
+# VHDL
+
+Disciplina de Circuitos Lógicos 2022.1.
