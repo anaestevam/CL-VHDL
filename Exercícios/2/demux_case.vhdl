@@ -1,10 +1,11 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 
 entity demux_case is
-		port (s: IN std_logic_vector(1 downto 0);
-				i: IN std_logic_vector(1 downto 0);
-				s1,s2,s3,s4: OUT std_logic_vector(1 downto 0));
+port (
+			s: IN std_logic_vector(1 downto 0);
+			i: IN std_logic_vector(1 downto 0);
+			s1,s2,s3,s4: OUT std_logic_vector(1 downto 0));
 end;
 
 architecture arq of demux_case is
