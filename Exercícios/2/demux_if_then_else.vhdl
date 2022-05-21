@@ -1,17 +1,19 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.all;
+library IEEE;
+use IEEE.std_logic_1164.all;
 
 entity demux_if_then_else is
-		port (s: IN std_logic_vector(1 downto 0);
-				i: IN std_logic_vector(1 downto 0);
-				s1,s2,s3,s4: OUT std_logic_vector(1 downto 0));
+port (
+			s: IN std_logic_vector(1 downto 0);
+			i: IN std_logic_vector(1 downto 0);
+			s1,s2,s3,s4: OUT std_logic_vector(1 downto 0));
 end;
 
 architecture arq of demux_if_then_else is
 	begin
 		process (s,i) is
-			begin
-				if (s="00") then
+       
+			 begin
+				if (s="00")  then
 					s1 <= i;
 					s2 <= "00";
 					s3 <= "00";
@@ -31,6 +33,6 @@ architecture arq of demux_if_then_else is
 					s1 <= "00";
 					s2 <= "00";
 					s3 <= "00";
-				end if;
-		end process;
+				end if;	
+        	end process;      
 end arq;
