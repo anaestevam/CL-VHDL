@@ -1,14 +1,14 @@
 library ieee;
 use ieee.std_logic_1164.all;
 
-entity testbench is
+entity demux_when is
 port (
 		s: in std_logic_vector(1 downto 0);
 		i: in std_logic_vector(1 downto 0);
 		s1,s2,s3,s4: out std_logic_vector(1 downto 0));
 end;
 
-architecture arq of testbench is
+architecture arq of demux_when is
 begin
 process	begin 
 		s1 <= i when s="00" else "00";
