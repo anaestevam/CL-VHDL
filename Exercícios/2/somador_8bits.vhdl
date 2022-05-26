@@ -24,8 +24,8 @@ architecture arq of somador_8bits is
 		i1: somador port map (a(1),b(1),c1,s(1),c2);
 		i2: somador port map (a(2),b(2),c2,s(2),c3);
 		i3: somador port map (a(3),b(3),c3,s(3),c4);
-    i4: somador port map (a(4),b(4),c4,s(4),c5);
-    i5: somador port map (a(5),b(5),c5,s(5),c6);
-    i6: somador port map (a(6),b(6),c6,s(6),c7);
-    i7: somador port map (a(7),b(7),c7,s(7),cout);
+    		i4: somador port map (a(4),b(4),c4,s(4),c5);
+    		i5: somador port map (a(5),b(5),c5,s(5),c6);
+    		i6: somador port map (a(6),b(6),c6,s(6),c7);
+   		i7: somador port map (a(7),b(7),c7,s(7),cout);
 end arq;
