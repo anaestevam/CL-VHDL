@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity comparador_3num is
 	port(n1, n2, n3 : in std_logic_vector(7 downto 0);
 		  s : out std_logic_vector(7 downto 0));
-end entity;
+end;
 
 architecture comparar of comparador_3num is 
 	begin 
@@ -36,4 +36,4 @@ architecture comparar of comparador_3num is
 					s <= n3;
 				end if;
 		end process;
-end architecture;
+end comparar;
