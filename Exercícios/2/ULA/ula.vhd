@@ -12,7 +12,7 @@ entity ula is
 		  -- 111 not B
 		  op: in std_logic_vector(2 downto 0);
 		  s: out std_logic_vector(7 downto 0));
-end entity;
+end;
 architecture arq of ula is
 	component somador_8bits is
 		port(a,b: in std_logic_vector(7 downto 0);
