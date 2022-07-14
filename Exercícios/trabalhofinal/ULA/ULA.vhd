@@ -45,10 +45,10 @@ architecture arq of ULA is
 		b <= "0000000000000001";
 		
 		a0: inversor port map(b, invertido1);
-		a1: somador_8_bits port map(invertido1, "0000000000000001", aux_cout(0), complemento1); -- complemento de 2 de b
-		a2: somador_8_bits port map(a, complemento1, aux_cout(1), a_menos_b); -- a - b
-		a3: somador_8_bits port map(a,b,aux_cout(2),a_mais_b); -- a + b
-		a4: somador_8_bits port map(a,"0000000000000001",aux_cout(3),a_mais_1); -- a + 1
+		a1: somador_8bits port map(invertido1, "0000000000000001", aux_cout(0), complemento1); -- complemento de 2 de b
+		a2: somador_8bits port map(a, complemento1, aux_cout(1), a_menos_b); -- a - b
+		a3: somador_8bits port map(a,b,aux_cout(2),a_mais_b); -- a + b
+		a4: somador_8bits port map(a,"0000000000000001",aux_cout(3),a_mais_1); -- a + 1
 		process(a,b,op) is
 			begin
 				case(op) is
@@ -71,10 +71,10 @@ architecture arq of ULA is
 				end case;
 		end process;
 		
-		a5: display_7_segmentos port map(s(3 downto 0), dis1);
-		a6: display_7_segmentos port map(s(7 downto 4), dis2);
-		a7: display_7_segmentos port map(s(11 downto 8), dis3);
-		a8: display_7_segmentos port map(s(15 downto 12), dis4);
+		a5: display7segmentos port map(s(3 downto 0), dis1);
+		a6: display7segmentos port map(s(7 downto 4), dis2);
+		a7: display7segmentos port map(s(11 downto 8), dis3);
+		a8: display7segmentos port map(s(15 downto 12), dis4);
 		
 		sd1 <= dis1;
 		sd2 <= dis2;
